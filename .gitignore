@@ -1,69 +1,83 @@
-# Prerequisites
-*.d
+# === [IDE Configuration Files] ===
+.vscode/
+.idea/
+.VSCodeCounter/
+.cache/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
-*.ilk
-
-# Debugger Files
-*.pdb
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-*.so.*
-
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-# Build directories
+# === [Build Outputs] ===
 build/
-Build/
 build-*/
+cmake-build*/
+out/
+bin/
+_deps/
 
-# CMake generated files
+# === [CMake Files] ===
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
-Makefile
-install_manifest.txt
+# Makefile
 compile_commands.json
+CTestTestfile.cmake
+Testing/
+*.ninja
+.ninja_deps
+.ninja_log
+rules.ninja
 
-# Temporary files
-*.tmp
+# === [Compiler / Debugger Artifacts] ===
+*.obj
+*.o
+*.dll
+*.exe
+*.out
+*.dSYM/
+*.pdb
+*.idb
+
+# === [Temporary / Runtime Files] ===
 *.log
+log/
+logs/
+tmp/
+*.tmp
 *.bak
 *.swp
+*~
 
-# vcpkg
+# === [Conan] ===
+conan.lock
+conanbuild/
+conanfile.txt.user
+conanfile.py.user
+*.conan/
+.conan/
+.conan_profile/
+
+# === [vcpkg] ===
+.vcpkg/
 vcpkg_installed/
+vcpkg_buildtrees/
+vcpkg_downloads/
+packages/
+installed/
 
-# debug information files
-*.dwo
+# === [System Files] ===
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
 
-# test output & cache
-Testing/
-.cache/
+# === [GitHub Actions / CI Cache] ===
+/.github/workflows/*.log
+.github/actions-cache/
+*.gcda
+*.gcno
+coverage/
+lcov.info
+
+# === [Python build helpers (optional)] ===
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
